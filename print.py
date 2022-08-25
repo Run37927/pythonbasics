@@ -1,4 +1,4 @@
 message = 'hello world'
 
 
-print(message.find('world'))
+print(message.count('el'))
