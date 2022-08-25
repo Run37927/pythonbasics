@@ -3,4 +3,4 @@ name = 'Mike'
 
 message = f"{greeting}, {name.upper()}. Welcome!"
 
-print(message)
+print(dir(name))
