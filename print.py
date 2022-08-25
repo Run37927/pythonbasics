@@ -1,4 +1,4 @@
 message = 'hello world'
 
 
-print(message.count('el'))
+print(help(str))
