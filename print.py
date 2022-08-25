@@ -1,6 +1,6 @@
 greeting = 'hello'
-name = 'mike'
+name = 'Mike'
 
-message = '{}, {}. welcome!'.format(greeting, name)
+message = f"{greeting}, {name}. Welcome!"
 
 print(message)
