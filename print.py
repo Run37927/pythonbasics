@@ -1,6 +1,4 @@
-greeting = 'hello'
-name = 'Mike'
+message = 'hello world'
 
-message = f"{greeting}, {name.upper()}. Welcome!"
 
-print(dir(name))
+print(message.find('world'))
