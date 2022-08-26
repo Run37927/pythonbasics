@@ -1,8 +1,11 @@
-def person(**kwargs):
-    print(kwargs)
-    if 'age' in kwargs:
-        print('you age is ', kwargs.get("age"))
+def order_pizza(name, address, **toppings):
+    print(f"order is for {name}")
+    print(f"ship to {address}")
+    price = 20.99
+    for key, value in toppings.items():
+        price += 2.0
+    print(f"total price is {price}")
+    return price
 
 
-person(name="jacob", age=27, brain="big")
-
+order_pizza("jake", "1234 main st", jalapenos=True, extra_cheese=True, pepproni=True)
