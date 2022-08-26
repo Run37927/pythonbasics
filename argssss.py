@@ -1,8 +1,8 @@
 def person(**kwargs):
     print(kwargs)
-    print(type(kwargs))
+    if 'age' in kwargs:
+        print('you age is ', kwargs.get("age"))
+
 
 person(name="jacob", age=27, brain="big")
 
-# {'name': 'jacob', 'age': 27, 'brain': 'big'}
-# <class 'dict'>
