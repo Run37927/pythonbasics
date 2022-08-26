@@ -1,8 +1,8 @@
-def add_numbers(*args): # args always come back as tuple
-    total = 0
-    for num in args:
-        total = total + num
-    return total
+def person(**kwargs):
+    print(kwargs)
+    print(type(kwargs))
 
+person(name="jacob", age=27, brain="big")
 
-print(add_numbers(1, 3, 5, 7, 9))
+# {'name': 'jacob', 'age': 27, 'brain': 'big'}
+# <class 'dict'>
