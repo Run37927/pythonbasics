@@ -1,6 +1,6 @@
 def order_pizza(name, address, **toppings):
     print(f"order is for {name}")
-    print(f"ship to {address}")
+    print(f"delivery to {address}")
     price = 20.99
     for key, value in toppings.items():
         price += 2.0
