@@ -3,10 +3,13 @@ class Animal:
 
     def speak(self):
         raise NotImplementedError
+
     def eat(self):
         print('im eating chips')
-    def chase(self):
-        raise NotImplementedError
+
+    def chase(self, animal='piranha'):
+        print('im chasing', animal)
+
 
 class HouseCat(Animal):
     def speak(self):
@@ -16,5 +19,9 @@ class HouseCat(Animal):
         super().eat()
         print('im eating tuna')
 
+    def chase(self, animal):
+        super().chase(animal)
+        print(animal, 'was caught')
+
 cat = HouseCat()
-cat.eat()
+cat.chase('tail')
