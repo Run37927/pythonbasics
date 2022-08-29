@@ -11,7 +11,8 @@ class Animal:
         pass
 
 class Tiger(Animal):
-    pass
+    def speak(self):
+        print('meow')
 
 
 tiger = Tiger()
