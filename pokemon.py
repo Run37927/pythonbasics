@@ -9,3 +9,7 @@ req = requests.get(url)
 
 data = req.json()
 print(f"weight is : {data['weight']}")
+print("abilities: ")
+
+for ability in data['abilities']:
+    print(ability['ability']['name'])
