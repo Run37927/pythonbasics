@@ -4,14 +4,21 @@ class Animal:
     def speak(self):
         raise NotImplementedError
     def eat(self):
-        pass
+        raise NotImplementedError
 
     def chase(self):
-        pass
+        raise NotImplementedError
 
 class HouseCat(Animal):
     def speak(self):
         print('meow')
 
+    def eat(self):
+        print('eating')
+
+    def chase(self):
+        print('chasing balls')
+
 cat = HouseCat()
-cat.speak()
+cat.eat()
+cat.chase()
