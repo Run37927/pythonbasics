@@ -1,6 +1,9 @@
 class Animal:
     fur_color = 'orange'
 
+    def __init__(self, fur_color):
+        print('fur color is', fur_color)
+
     def speak(self):
         raise NotImplementedError
 
@@ -23,5 +26,6 @@ class HouseCat(Animal):
         super().chase(animal)
         print(animal, 'was caught')
 
-cat = HouseCat()
+
+cat = HouseCat("blue")
 cat.chase('tail')
