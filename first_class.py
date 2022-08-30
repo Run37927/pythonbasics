@@ -1,8 +1,8 @@
 class Animal:
-    fur_color = 'orange'
+    animal_type = "unknown"
 
     def __init__(self, fur_color):
-        print('fur color is', fur_color)
+        self.fur_color = fur_color
 
     def speak(self):
         raise NotImplementedError
@@ -13,8 +13,17 @@ class Animal:
     def chase(self, animal='piranha'):
         print('im chasing', animal)
 
+    def get_fur_color(self):
+        print("getting fur color:", self.fur_color)
+
 
 class HouseCat(Animal):
+    def __init__(self, fur_color):
+        super().__init__(fur_color)
+        print("fur color was saved to the class object")
+        self.animal_type = "house cat"
+        print("animal type is:", self.animal_type)
+
     def speak(self):
         print('meow')
 
@@ -28,4 +37,3 @@ class HouseCat(Animal):
 
 
 cat = HouseCat("blue")
-cat.chase('tail')
