@@ -13,6 +13,6 @@ print(queue)
 print(type(queue))
 
 x = queue.popleft()
-# takes item off from the front of the queue
+# takes item off from the front of the queue, or 'DQ'
 print(x)
 print(queue)
