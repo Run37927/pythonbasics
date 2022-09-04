@@ -2,7 +2,7 @@ def minimumWaitingTime(queries):
     # Write your code here.
     if len(queries) == 1:
         return 0
-    queries.sort()
+    queries.sort() # built in sort nlogn
     res = []
     t = 0
     for i in range(len(queries) - 1):
