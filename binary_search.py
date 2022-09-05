@@ -25,8 +25,7 @@ def helper(array, target, left, right):
         if array[middle] == target:
             return middle
         elif target < array[middle]:
-            return helper(array, target, left, middle - 1)
+            right = middle - 1
         else:
-            return helper(array, target, middle + 1, right)
-
+            left = middle + 1
     return -1
