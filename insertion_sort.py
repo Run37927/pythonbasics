@@ -11,3 +11,7 @@ def insertion(array):
 
 def swap(k, m, a_list):
     a_list[k], a_list[m] = a_list[m], a_list[k]
+
+
+sample = [8, 5, 2, 9, 5, 6, 3]
+print(insertion(sample))
