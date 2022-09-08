@@ -11,7 +11,7 @@
 
 def find(string):
     # using dictionary
-    counts = {}
+    counts = {} #space is constant
     for char in string:
         if char not in counts:
             counts[char] = 1
