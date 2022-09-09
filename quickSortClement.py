@@ -27,5 +27,6 @@ def quick_helper(array, start, end):
         quick_helper(array, right_index + 1, end)
         quick_helper(array, start, right_index - 1)
 
+
 def swap(i, j, array):
     array[i], array[j] = array[j], array[i]
