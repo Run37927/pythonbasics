@@ -18,7 +18,10 @@ def quick_helper(array, start, end):
             left_index += 1
         if array[right_index] >= array[pivot_index]:
             right_index -= 1
+
+    # now left right have crossed, so swap value at pivot and value at right pointer
     swap(pivot_index, right_index, array)
+
     left_subarr_is_smaller = right_index - 1 - start < end - (right_index + 1)
     if left_subarr_is_smaller:
         quick_helper(array, start, right_index - 1)
