@@ -4,28 +4,28 @@ def quick(array):
     return array
 
 
-def quick_helper(subarr, start, end):
+def quick_helper(array, start, end):
     if start >= end:
         return
     pivot_index = start
     left_index = start + 1
     right_index = end
 
-    while right_index >= left_index:
-        if subarr[left_index] > subarr[pivot_index] > subarr[right_index]:
-            swap(left_index, right_index, subarr)
-        if subarr[left_index] <= subarr[pivot_index]:
+    while right_index >= left_index: # while they haven't crossed each other
+        if array[left_index] > array[pivot_index] > array[right_index]:
+            swap(left_index, right_index, array)
+        if array[left_index] <= array[pivot_index]:
             left_index += 1
-        if subarr[right_index] >= subarr[pivot_index]:
+        if array[right_index] >= array[pivot_index]:
             right_index -= 1
-    swap(pivot_index, right_index, subarr)
+    swap(pivot_index, right_index, array)
     left_subarr_is_smaller = right_index - 1 - start < end - (right_index + 1)
     if left_subarr_is_smaller:
-        quick_helper(subarr, start, right_index - 1)
-        quick_helper(subarr, right_index + 1, end)
+        quick_helper(array, start, right_index - 1)
+        quick_helper(array, right_index + 1, end)
     else:
-        quick_helper(subarr, right_index + 1, end)
-        quick_helper(subarr, start, right_index - 1)
+        quick_helper(array, right_index + 1, end)
+        quick_helper(array, start, right_index - 1)
 
 def swap(i, j, array):
     array[i], array[j] = array[j], array[i]
